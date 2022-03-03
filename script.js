@@ -183,3 +183,28 @@ const min = books.reduce((prev, current) => ( (prev.rented < current.rented) ? p
 console.log(min.title) 
 });
 
+// Trouve le livre avec l'ID: 873495
+let script12 = document.getElementById("script12");
+script12.addEventListener('click', event => {
+  books.forEach(element => {
+    if (element.id === 873495)
+      return console.log(element.title);
+    });
+});
+
+//Supprime le livre avec l'ID: 133712 
+let script13 = document.getElementById("script13");
+script13.addEventListener('click', event => {
+for (var i=0; i<(books.length); i++){
+  if (books[i].id === 133712) {
+  books.splice(i, 1); 
+  } 
+};
+console.log("Le livre avec l'ID 133712 a été supprimé.")
+});
+
+// Afficher books
+let script14 = document.getElementById("script14");
+script14.addEventListener('click', event => {
+console.log(books)
+});
